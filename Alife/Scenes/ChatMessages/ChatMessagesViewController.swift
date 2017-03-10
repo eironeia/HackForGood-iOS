@@ -13,6 +13,7 @@ import JSQMessagesViewController
 class ChatMessages: JSQMessagesViewController {
     
     var chatAPIStore:ChatAPI = ChatAPI()
+    var botAPIStore: BotAPIStore  = BotAPIStore()
     var emergencyID:String!
     
     let incomingBubble = JSQMessagesBubbleImageFactory().incomingMessagesBubbleImageWithColor(UIColor(red: 10/255, green: 180/255, blue: 230/255, alpha: 1.0))
@@ -34,12 +35,12 @@ class ChatMessages: JSQMessagesViewController {
     
     func observeMessages() {
         
-        chatAPIStore.getMessages(self.emergencyID) { (message) in
-        
-            let newMessage = JSQMessage(senderId: message.senderID, displayName: message.senderName, text: message.content)
-            self.messages += [newMessage]
-            self.finishSendingMessage()
-        }
+//        chatAPIStore.getMessages(self.emergencyID) { (message) in
+//        
+//            let newMessage = JSQMessage(senderId: message.senderID, displayName: message.senderName, text: message.content)
+//            self.messages += [newMessage]
+//            self.finishSendingMessage()
+//        }
     }
     
     func setup() {

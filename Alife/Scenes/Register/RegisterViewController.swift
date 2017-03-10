@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class RegisterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     var authAPIStore: AuthAPIStore = AuthAPIStore()
     
@@ -45,6 +45,10 @@ class RegisterViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         
         self.hideKeyboardWhenTappedAround()
+        
+        emailTextField.keyboardType = .EmailAddress
+        passwordTextField.secureTextEntry = true
+        ageTextField.keyboardType = .DecimalPad
     }
     
     override func didReceiveMemoryWarning() {
@@ -55,13 +59,13 @@ class RegisterViewController: UIViewController, UITableViewDelegate, UITableView
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "emergencySegue") {
             let destinationVC: UITabBarController = segue.destinationViewController as! TabBar
-            destinationVC.navigationItem.hidesBackButton = true   
+            destinationVC.navigationItem.hidesBackButton = true
         }
     }
     
-    func registerButtonPressed() {
+    func register(withEmail email: String, andPassword password: String, andName name: String, andAge age: String) {
         self.view.endEditing(true)
-        self.authAPIStore.register(self.name, email: self.email, password: self.password) { (user) in
+        self.authAPIStore.register(name, email: email, password: password) { (user) in
             
             self.performSegueWithIdentifier("emergencySegue", sender: self)
             
@@ -76,6 +80,21 @@ class RegisterViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    @IBAction func backToLoginButtonPressed(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    @IBAction func registerButtonPressed(sender: AnyObject) {
+        
+        
+        if emailTextField.text! != ""
+            || passwordTextField.text! != ""
+            || nameTextField.text! != ""
+            || ageTextField.text! != ""
+        {
+            self.register(withEmail: email, andPassword: password, andName: name, andAge: age)
+        }
     }
 }
 

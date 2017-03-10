@@ -9,7 +9,8 @@
 import UIKit
 import FirebaseAuth
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+
+class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControllerTransitioningDelegate {
 
     
     var authAPIStore: AuthAPIStore = AuthAPIStore()
@@ -18,6 +19,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var loginButton: TKTransitionSubmitButton!
     
     var user:User? 
     
@@ -50,6 +52,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        
+        passwordTextField.secureTextEntry = true
     }
 
     override func didReceiveMemoryWarning() {

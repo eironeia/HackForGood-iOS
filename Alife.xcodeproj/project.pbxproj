@@ -12,6 +12,7 @@
 		038F9BDC1E6B78EC0033D889 /* Buttons+EmergencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038F9BDB1E6B78EC0033D889 /* Buttons+EmergencyVC.swift */; };
 		03DD17241E6AE74D00CBD252 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD17231E6AE74D00CBD252 /* Location.swift */; };
 		9C219C881E7319BF009CCC0C /* TextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C219C871E7319BF009CCC0C /* TextField+Extension.swift */; };
+		9C219C8A1E73267A009CCC0C /* BotAPIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C219C891E73267A009CCC0C /* BotAPIStore.swift */; };
 		9C24AD291E6A2DA600AB0503 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24AD281E6A2DA600AB0503 /* AppDelegate.swift */; };
 		9C24AD2B1E6A2DA600AB0503 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24AD2A1E6A2DA600AB0503 /* ViewController.swift */; };
 		9C24AD2E1E6A2DA600AB0503 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C24AD2C1E6A2DA600AB0503 /* Main.storyboard */; };
@@ -59,6 +60,8 @@
 		03DD17231E6AE74D00CBD252 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		42A00F9DC740FF447A229DC3 /* Pods-Alife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alife.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alife/Pods-Alife.release.xcconfig"; sourceTree = "<group>"; };
 		9C219C871E7319BF009CCC0C /* TextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
+		9C219C891E73267A009CCC0C /* BotAPIStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotAPIStore.swift; sourceTree = "<group>"; };
+		9C219C8B1E732B5F009CCC0C /* TKSubmitTransition.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TKSubmitTransition.framework; path = "Pods/../build/Debug-iphoneos/TKSubmitTransition/TKSubmitTransition.framework"; sourceTree = "<group>"; };
 		9C24AD251E6A2DA600AB0503 /* Alife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C24AD281E6A2DA600AB0503 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C24AD2A1E6A2DA600AB0503 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +124,7 @@
 		97978ACE9133C8E1517ECF60 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C219C8B1E732B5F009CCC0C /* TKSubmitTransition.framework */,
 				9CBDA7501E6B59850080967E /* HealthKit.framework */,
 				C7AC0FD1E34C965D628BFA79 /* Pods_Alife.framework */,
 			);
@@ -321,6 +325,7 @@
 				9CBDA7531E6B5A9C0080967E /* AuthAPIStore.swift */,
 				9CBDA7541E6B5A9C0080967E /* ChatAPI.swift */,
 				9CBDA7551E6B5A9C0080967E /* EmergencyAPIStore.swift */,
+				9C219C891E73267A009CCC0C /* BotAPIStore.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -528,6 +533,7 @@
 				9C24AD521E6A301800AB0503 /* LoginViewController.swift in Sources */,
 				9C219C881E7319BF009CCC0C /* TextField+Extension.swift in Sources */,
 				9CE468D51E6A427F00DFD475 /* IconTextFieldCell.swift in Sources */,
+				9C219C8A1E73267A009CCC0C /* BotAPIStore.swift in Sources */,
 				9C4D36F41E6AF2C500C0828F /* EmergencyViewController.swift in Sources */,
 				9CE468D71E6A4B2E00DFD475 /* AppTitleCell.swift in Sources */,
 				9CBDA7601E6B67FC0080967E /* TableView+ProfileVC.swift in Sources */,
@@ -665,6 +671,10 @@
 				CODE_SIGN_ENTITLEMENTS = Alife/Alife.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/TKSubmitTransition",
+				);
 				INFOPLIST_FILE = Alife/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackupc.alife;
@@ -681,6 +691,10 @@
 				CODE_SIGN_ENTITLEMENTS = Alife/Alife.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/TKSubmitTransition",
+				);
 				INFOPLIST_FILE = Alife/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackupc.alife;

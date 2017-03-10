@@ -13,6 +13,7 @@ extension LoginViewController {
     
     func login(withEmail email: String, andPassword password: String) {
         
+        loginButton =
         self.authAPIStore.login(email, password: password) { (user, error) in
             
             if let error = error {
@@ -35,6 +36,8 @@ extension LoginViewController {
     
     @IBAction func loginButtonPressed(sender: AnyObject) {
         
+        
+        self.login(withEmail: emailTextField.text!, andPassword: passwordTextField.text!)
         
     }
 }

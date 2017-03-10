@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLe-W1-aKL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLe-W1-aKL" customClass="TKTransitionSubmitButton" customModule="TKSubmitTransition">
                                 <rect key="frame" x="52" y="385" width="271" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="mii-9D-UbV"/>
@@ -103,6 +103,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="emailTextField" destination="tkw-K3-qdb" id="TtJ-OB-k0e"/>
+                        <outlet property="loginButton" destination="XLe-W1-aKL" id="zYy-zn-TYE"/>
                         <outlet property="passwordTextField" destination="4Me-Tg-B0f" id="Cre-Cf-BP5"/>
                         <segue destination="eX1-tO-IJH" kind="show" identifier="emergencySegue" id="4Bf-YK-QZZ"/>
                         <segue destination="f9F-jz-E09" kind="show" identifier="registerScene" id="6fo-sN-cnN"/>
@@ -470,6 +471,9 @@
                                 <state key="normal" title="Register" backgroundImage="buttonLogin">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerButtonPressed:" destination="f9F-jz-E09" eventType="touchUpInside" id="p30-Qz-Isl"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="labelField" translatesAutoresizingMaskIntoConstraints="NO" id="td2-1X-LVh">
                                 <rect key="frame" x="48" y="345" width="279" height="51"/>
@@ -537,6 +541,9 @@
                                 <state key="normal" title="Already have account? Log in">
                                     <color key="titleColor" red="0.50980392159999999" green="0.52941176469999995" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="backToLoginButtonPressed:" destination="f9F-jz-E09" eventType="touchUpInside" id="mqz-Wa-IEp"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UZS-Pd-tQa">
                                 <rect key="frame" x="63" y="275" width="255" height="51"/>
@@ -658,6 +665,6 @@
         <image name="profileIcon" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YbF-MH-arH"/>
+        <segue reference="4Bf-YK-QZZ"/>
     </inferredMetricsTieBreakers>
 </document>

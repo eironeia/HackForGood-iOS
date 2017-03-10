@@ -17,7 +17,9 @@ extension ChatMessages {
 //        let message = JSQMessage(senderId: senderId, senderDisplayName: senderDisplayName, date: date, text: text)
 //        self.messages += [message]
 //        self.finishSendingMessage()
-        self.chatAPIStore.sendMessage(self.senderId, emergencyID: self.emergencyID, message: text) {}
+        
+        self.botAPIStore.sendMessage(withText: text)
+//        self.chatAPIStore.sendMessage(self.senderId, emergencyID: self.emergencyID, message: text) {}
     }
     
     override func didPressAccessoryButton(sender: UIButton!) {

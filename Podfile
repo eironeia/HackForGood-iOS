@@ -24,4 +24,6 @@ target 'Alife' do
 	pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :tag => '4.0.0'
     
     pod 'SwiftLocation', :git => 'https://github.com/malcommac/SwiftLocation.git', :branch => 'feature/swift2.3'
+
+    #pod 'TKSubmitTransition'
 end
