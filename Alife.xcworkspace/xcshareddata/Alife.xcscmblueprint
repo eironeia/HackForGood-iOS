@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5AB229AAA1746B8F527A9B66FA9ACD1F0FC3DDB1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "EEED163F87944A432AA5186EBEBACD31558F8793" : 0,
+    "5AB229AAA1746B8F527A9B66FA9ACD1F0FC3DDB1" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "13AD7C7A-E60B-499A-A7CE-7B36461E9124",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "EEED163F87944A432AA5186EBEBACD31558F8793" : "",
+    "5AB229AAA1746B8F527A9B66FA9ACD1F0FC3DDB1" : "HackForGood-iOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Alife",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Alife.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/eironeia\/HackForGood-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5AB229AAA1746B8F527A9B66FA9ACD1F0FC3DDB1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/eironeia\/HackForGood-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EEED163F87944A432AA5186EBEBACD31558F8793"
+    }
+  ]
+}

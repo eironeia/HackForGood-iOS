@@ -1,0 +1,6 @@
+framework module Pods_Alife {
+  umbrella header "Pods-Alife-umbrella.h"
+
+  export *
+  module * { export * }
+}
