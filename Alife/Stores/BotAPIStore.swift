@@ -10,17 +10,18 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+typealias SendMessageCompletionHandler = String -> Void
 
 class BotAPIStore {
     
-    func sendMessage(withText text: String) {
+    func sendMessage(withText text: String, completion: SendMessageCompletionHandler) {
         
-        let URL = NSURL(string: "https://westus.api.cognitive.microsoft.com/qnamaker/v1.0/knowledgebases/4a5d95b4-3943-4fc7-806c-80b83557c8f9/generateAnswer")!
+        let URL = NSURL(string: Constants.BotVG.url)!
         let URLRequest = NSMutableURLRequest(URL: URL)
         
         URLRequest.HTTPMethod = "POST"
         
-        URLRequest.setValue("d0601958c0474370ab64a0eb1f7f02ef", forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
+        URLRequest.setValue(Constants.BotVG.subscriptionValue, forHTTPHeaderField: Constants.BotVG.subscriptionHeader)
         URLRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let encoding = Alamofire.ParameterEncoding.JSON
@@ -31,9 +32,28 @@ class BotAPIStore {
         
         let encoded = encoding.encode(URLRequest, parameters: parameters).0
         Alamofire.request(encoded).responseJSON { (response) in
-            print(response)
-            print(response.result)
+
+            if let result = response.result.value {
+                print(result)
+                if let answerString = result["answer"] as?  String {
+                    let htmlString = answerString
+                    if let htmldata = htmlString.dataUsingEncoding(NSUTF8StringEncoding), let attributedString = try? NSAttributedString(data: htmldata, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil) {
+                        let finalString = attributedString.string
+                        print(finalString)
+                        completion(finalString)
+                        
+                    }
+                }
+            }
         }
     }
+    
+    /*
+     {
+     answer = "Hola! &#191;Qu&#233; queires saber sobre la violencia de g&#233;nero?";
+     score = 100;
+     }
+     
+     */
 
 }

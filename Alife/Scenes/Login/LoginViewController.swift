@@ -19,7 +19,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
     
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet var loginButton: TKTransitionSubmitButton!
+    
     
     var user:User? 
     
@@ -34,7 +34,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
         super.viewWillAppear(animated)
         self.navigationItem.setHidesBackButton(true, animated: true)
         
-        self.signOut()
+//        self.signOut()
         
         if let _ = FIRAuth.auth()?.currentUser {
 
@@ -52,8 +52,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
 
         emailTextField.delegate = self
         passwordTextField.delegate = self
-        
         passwordTextField.secureTextEntry = true
+        
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,8 +67,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "emergencySegue") {
             let destinationVC: UITabBarController = segue.destinationViewController as! TabBar
+            
+            let button1 = UIBarButtonItem(image: UIImage(named: "profileIconNav"), style: .Plain, target: self, action: #selector(goToProfile))
             destinationVC.navigationItem.hidesBackButton = true
+            destinationVC.navigationItem.leftBarButtonItem = button1
+            
         }
+        
+    }
+    
+    func goToProfile() {
+        
+        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("profileViewController") as UIViewController
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
         
     }
 

@@ -14,12 +14,9 @@ import JSQMessagesViewController
 extension ChatMessages {
     
     override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
-//        let message = JSQMessage(senderId: senderId, senderDisplayName: senderDisplayName, date: date, text: text)
-//        self.messages += [message]
-//        self.finishSendingMessage()
-        
-        self.botAPIStore.sendMessage(withText: text)
-//        self.chatAPIStore.sendMessage(self.senderId, emergencyID: self.emergencyID, message: text) {}
+
+        self.chatAPIStore.sendMessage(self.senderId, emergencyID: self.emergencyID, message: text) {}
+        self.finishSendingMessage()
     }
     
     override func didPressAccessoryButton(sender: UIButton!) {

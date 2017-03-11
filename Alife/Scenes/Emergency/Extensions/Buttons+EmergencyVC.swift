@@ -56,4 +56,26 @@ extension EmergencyViewController {
         self.presentViewController(alert, animated: true, completion: nil)
         
     }
+    
+    @IBAction func emergencyButton1Pressed(sender: AnyObject) {
+        deadRisk()
+    }
+    
+    @IBAction func emergencyButton2Pressed(sender: AnyObject) {
+        deadRisk()
+    }
+    
+    @IBAction func chatBot1Pressed(sender: AnyObject) {
+        self.goToChatBot()
+    }
+    
+    @IBAction func chatBot2Pressed(sender: AnyObject) {
+        self.goToChatBot()
+    }
+    
+    func goToChatBot() {
+        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("chatBot") as UIViewController
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 }

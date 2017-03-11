@@ -10,7 +10,7 @@ import UIKit
 import SwiftLocation
 import Firebase
 
-class EmergencyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class EmergencyViewController: UIViewController {
     let emergencyAPIStore = EmergencyAPIStore()
     
     var userID:String = ""
@@ -20,7 +20,9 @@ class EmergencyViewController: UIViewController, UITableViewDelegate, UITableVie
         userID = (FIRAuth.auth()?.currentUser?.uid)!
         
 
-        // Do any additional setup after loading the view.
+        let button1 = UIBarButtonItem(image: UIImage(named: "abuseIcon"), style: .Plain, target: self, action: nil)
+        self.navigationItem.rightBarButtonItem = button1
+        self.navigationController?.navigationItem.rightBarButtonItems = [button1]
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,5 +55,6 @@ class EmergencyViewController: UIViewController, UITableViewDelegate, UITableVie
 
         
     }
-
 }
+
+

@@ -21,8 +21,9 @@ extension ChatListViewController {
 
             let emergency = self.emergencies[indexPath.row]
             
-            cell.emergencyLocationTextView.text = "Emergency in Barcelona"
-            cell.emergencyGravityTextView.text = self.minutesDifference(emergency.timestamp)
+            cell.emergencyTitleLabel.text = "Emergency in Barcelona"
+            cell.emergencyTimeLabel.text = self.minutesDifference(emergency.timestamp)
+        
             
             cell.gravityColor.layer.cornerRadius = cell.gravityColor.frame.height / 2
             switch emergency.type {

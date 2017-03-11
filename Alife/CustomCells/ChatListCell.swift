@@ -10,8 +10,9 @@ import UIKit
 
 class ChatListCell: UITableViewCell {
 
-    @IBOutlet var emergencyLocationTextView: UITextView!
-    @IBOutlet var emergencyGravityTextView: UITextView!
+
+    @IBOutlet var emergencyTitleLabel: UILabel!
+    @IBOutlet var emergencyTimeLabel: UILabel!
     @IBOutlet var gravityColor: UIView!
     
 }
