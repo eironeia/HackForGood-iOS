@@ -59,8 +59,21 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "emergencySegue") {
             let destinationVC: UITabBarController = segue.destinationViewController as! TabBar
+            
+            let button1 = UIBarButtonItem(image: UIImage(named: "profileIconNav"), style: .Plain, target: self, action: #selector(goToProfile))
             destinationVC.navigationItem.hidesBackButton = true
+            destinationVC.navigationItem.leftBarButtonItem = button1
+            
         }
+        
+    }
+    
+    func goToProfile() {
+        
+        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("profileViewController") as UIViewController
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
     }
     
     func register(withEmail email: String, andPassword password: String, andName name: String, andAge age: String) {
@@ -93,7 +106,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             || nameTextField.text! != ""
             || ageTextField.text! != ""
         {
-            self.register(withEmail: email, andPassword: password, andName: name, andAge: age)
+            self.register(withEmail: emailTextField.text!, andPassword: passwordTextField.text!, andName: nameTextField.text!, andAge: ageTextField.text!)
         }
     }
 }

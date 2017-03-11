@@ -32,7 +32,7 @@ extension ProfileViewController {
                 cell.customImageView.layer.cornerRadius = cell.customImageView.frame.height / 2
                 cell.customImageView.image = UIImage(named: "godJobs")
                 cell.customImageView.layer.masksToBounds = true
-                cell.customUsernameLabel.text = "Steve Jobs"
+                cell.customUsernameLabel.text = "Alex"
                 return cell
             }
             

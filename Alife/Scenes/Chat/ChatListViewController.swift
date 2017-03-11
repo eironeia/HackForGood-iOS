@@ -30,9 +30,21 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
         emergencyAPIStore.getUserEmergenciesID(userID) { (emergencyID) in
             self.emergenciesID.append(emergencyID)
             self.emergencyAPIStore.getEmergency(emergencyID, callback: { (emergency) in
-                self.emergencies.insert(emergency, atIndex: 0)
-                let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-                self.chatTableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+                
+                var alreadyThere:Bool = false
+                
+                for emergency in self.emergencies {
+                    if emergency.id == emergencyID {
+                        alreadyThere = true
+                    }
+                }
+                
+                if !alreadyThere {
+                    self.emergencies.insert(emergency, atIndex: 0)
+                    let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+                    self.chatTableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+                }
+                
             })
             
         }    

@@ -9,8 +9,14 @@
 import UIKit
 
 
-class Contacts: UIViewController {
+class Contacts: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet var contactTableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.contactTableView.tableFooterView = UIView()
+    }
     
 
 }

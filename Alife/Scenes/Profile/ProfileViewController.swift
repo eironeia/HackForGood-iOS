@@ -20,7 +20,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         
         self.profileTableView.tableFooterView = UIView()
-
+        self.edgesForExtendedLayout = UIRectEdge.None
         
     }
     

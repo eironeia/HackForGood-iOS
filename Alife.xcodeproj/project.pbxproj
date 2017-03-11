@@ -47,6 +47,8 @@
 		9CC0494C1E733A470051AA13 /* Buttons+BotChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0494B1E733A470051AA13 /* Buttons+BotChatVC.swift */; };
 		9CC0494E1E7407C30051AA13 /* RandomUserAPIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0494D1E7407C30051AA13 /* RandomUserAPIStore.swift */; };
 		9CC049511E740ACF0051AA13 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC049501E740ACF0051AA13 /* Contacts.swift */; };
+		9CC049541E741C510051AA13 /* TableView+ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC049531E741C510051AA13 /* TableView+ContactsVC.swift */; };
+		9CC049561E741DD80051AA13 /* Contactcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC049551E741DD80051AA13 /* Contactcell.swift */; };
 		9CE468D51E6A427F00DFD475 /* IconTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE468D41E6A427F00DFD475 /* IconTextFieldCell.swift */; };
 		9CE468D71E6A4B2E00DFD475 /* AppTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE468D61E6A4B2E00DFD475 /* AppTitleCell.swift */; };
 		9CE468D91E6A543200DFD475 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE468D81E6A543200DFD475 /* ButtonCell.swift */; };
@@ -103,6 +105,8 @@
 		9CC0494B1E733A470051AA13 /* Buttons+BotChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Buttons+BotChatVC.swift"; sourceTree = "<group>"; };
 		9CC0494D1E7407C30051AA13 /* RandomUserAPIStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomUserAPIStore.swift; sourceTree = "<group>"; };
 		9CC049501E740ACF0051AA13 /* Contacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		9CC049531E741C510051AA13 /* TableView+ContactsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView+ContactsVC.swift"; sourceTree = "<group>"; };
+		9CC049551E741DD80051AA13 /* Contactcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contactcell.swift; sourceTree = "<group>"; };
 		9CE468D41E6A427F00DFD475 /* IconTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconTextFieldCell.swift; sourceTree = "<group>"; };
 		9CE468D61E6A4B2E00DFD475 /* AppTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTitleCell.swift; sourceTree = "<group>"; };
 		9CE468D81E6A543200DFD475 /* ButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
@@ -396,6 +400,7 @@
 		9CC049521E740AF50051AA13 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9CC049531E741C510051AA13 /* TableView+ContactsVC.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -410,6 +415,7 @@
 				9CBDA7471E6B260B0080967E /* ChatListCell.swift */,
 				9CBDA75B1E6B65370080967E /* TwoLabelsCell.swift */,
 				9CBDA75D1E6B661D0080967E /* ImageLabelCell.swift */,
+				9CC049551E741DD80051AA13 /* Contactcell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -571,6 +577,7 @@
 				9C24AD561E6A317400AB0503 /* Setup+LoginVC.swift in Sources */,
 				9CBDA74B1E6B26F60080967E /* TableView+ChatListVC.swift in Sources */,
 				9C24AD311E6A2DA600AB0503 /* Alife.xcdatamodeld in Sources */,
+				9CC049541E741C510051AA13 /* TableView+ContactsVC.swift in Sources */,
 				9CBDA74E1E6B3DF00080967E /* NavigationViewController.swift in Sources */,
 				9CBDA7661E6BBA410080967E /* CollectionView+ChatMessagesVC.swift in Sources */,
 				9CE468EB1E6ADF3300DFD475 /* TabBarController+Extension.swift in Sources */,
@@ -598,6 +605,7 @@
 				9C24AD4A1E6A2F8000AB0503 /* ChatListViewController.swift in Sources */,
 				9CE468DF1E6A610D00DFD475 /* Buttons+LoginVC.swift in Sources */,
 				9C24AD291E6A2DA600AB0503 /* AppDelegate.swift in Sources */,
+				9CC049561E741DD80051AA13 /* Contactcell.swift in Sources */,
 				9CC0494E1E7407C30051AA13 /* RandomUserAPIStore.swift in Sources */,
 				9CE468DD1E6A5F0500DFD475 /* LabelCell.swift in Sources */,
 				9C24AD4C1E6A2FAD00AB0503 /* User.swift in Sources */,

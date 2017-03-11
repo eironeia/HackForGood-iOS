@@ -54,7 +54,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
         passwordTextField.delegate = self
         passwordTextField.secureTextEntry = true
         
-        
+        emailTextField.text = "newuser@hotmail.com"
+        passwordTextField.text = "test123"
         
         
     }
